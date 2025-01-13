@@ -1,10 +1,10 @@
-package com.john_henry.User.aplication.service;
+package com.john_henry.User.application.service;
 
-import com.john_henry.User.aplication.dto.SellerDTO;
-import com.john_henry.User.aplication.mapper.SellerMapper;
-import com.john_henry.User.aplication.ports.input.SellerService;
-import com.john_henry.User.aplication.ports.output.SellerRepository;
-import com.john_henry.User.aplication.ports.output.UserRepository;
+import com.john_henry.User.application.dto.SellerDTO;
+import com.john_henry.User.application.mapper.SellerMapper;
+import com.john_henry.User.application.ports.input.SellerService;
+import com.john_henry.User.application.ports.output.SellerRepository;
+import com.john_henry.User.application.ports.output.UserRepository;
 import com.john_henry.User.domain.exception.SellerNotFoundException;
 import com.john_henry.User.domain.exception.UserNotFoundException;
 import com.john_henry.User.domain.model.Seller;

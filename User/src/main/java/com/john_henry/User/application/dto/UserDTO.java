@@ -1,4 +1,4 @@
-package com.john_henry.User.aplication.dto;
+package com.john_henry.User.application.dto;
 
 import com.john_henry.User.domain.model.Role;
 import jakarta.validation.constraints.Email;

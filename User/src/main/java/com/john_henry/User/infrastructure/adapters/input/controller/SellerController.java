@@ -1,7 +1,7 @@
 package com.john_henry.User.infrastructure.adapters.input.controller;
 
-import com.john_henry.User.aplication.dto.SellerDTO;
-import com.john_henry.User.aplication.ports.input.SellerService;
+import com.john_henry.User.application.dto.SellerDTO;
+import com.john_henry.User.application.ports.input.SellerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

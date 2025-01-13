@@ -1,4 +1,4 @@
-package com.john_henry.User.aplication.ports.output;
+package com.john_henry.User.application.ports.output;
 
 import com.john_henry.User.domain.model.User;
 

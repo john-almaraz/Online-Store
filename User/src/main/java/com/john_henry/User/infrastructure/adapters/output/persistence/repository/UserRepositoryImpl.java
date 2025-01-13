@@ -1,6 +1,6 @@
 package com.john_henry.User.infrastructure.adapters.output.persistence.repository;
 
-import com.john_henry.User.aplication.ports.output.UserRepository;
+import com.john_henry.User.application.ports.output.UserRepository;
 import com.john_henry.User.domain.model.User;
 import com.john_henry.User.infrastructure.adapters.output.persistence.entity.UserEntity;
 import com.john_henry.User.infrastructure.adapters.output.persistence.mapper.UserPersistenceMapper;
@@ -21,9 +21,9 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User createUser(User userEntity) {
-        UserEntity user = userPersistenceMapper.toEntity(userEntity);
-        return userPersistenceMapper.toDomain(jpaUserRepository.save(user));
+    public User createUser(User user) {
+        UserEntity userEntity = userPersistenceMapper.toEntity(user);
+        return userPersistenceMapper.toDomain(jpaUserRepository.save(userEntity));
     }
 
     @Override

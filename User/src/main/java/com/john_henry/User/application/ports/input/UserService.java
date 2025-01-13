@@ -1,6 +1,6 @@
-package com.john_henry.User.aplication.ports.input;
+package com.john_henry.User.application.ports.input;
 
-import com.john_henry.User.aplication.dto.UserDTO;
+import com.john_henry.User.application.dto.UserDTO;
 
 import java.util.List;
 

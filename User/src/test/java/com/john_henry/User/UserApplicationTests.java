@@ -9,5 +9,9 @@ class UserApplicationTests {
 	@Test
 	void contextLoads() {
 	}
+	@Test
+	void mainMethodTest() {
+		UserApplication.main(new String[]{});
+	}
 
 }

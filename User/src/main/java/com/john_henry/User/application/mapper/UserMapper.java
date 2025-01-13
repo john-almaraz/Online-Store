@@ -1,6 +1,6 @@
-package com.john_henry.User.aplication.mapper;
+package com.john_henry.User.application.mapper;
 
-import com.john_henry.User.aplication.dto.UserDTO;
+import com.john_henry.User.application.dto.UserDTO;
 import com.john_henry.User.domain.model.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

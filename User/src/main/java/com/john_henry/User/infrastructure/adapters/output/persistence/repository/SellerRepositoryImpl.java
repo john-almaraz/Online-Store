@@ -1,6 +1,6 @@
 package com.john_henry.User.infrastructure.adapters.output.persistence.repository;
 
-import com.john_henry.User.aplication.ports.output.SellerRepository;
+import com.john_henry.User.application.ports.output.SellerRepository;
 import com.john_henry.User.domain.model.Seller;
 import com.john_henry.User.infrastructure.adapters.output.persistence.entity.SellerEntity;
 import com.john_henry.User.infrastructure.adapters.output.persistence.mapper.SellerPersistenceMapper;

@@ -1,10 +1,10 @@
-package com.john_henry.User.aplication.service;
+package com.john_henry.User.application.service;
 
-import com.john_henry.User.aplication.dto.UserDTO;
-import com.john_henry.User.aplication.mapper.UserMapper;
-import com.john_henry.User.aplication.ports.input.UserService;
-import com.john_henry.User.aplication.ports.output.SellerRepository;
-import com.john_henry.User.aplication.ports.output.UserRepository;
+import com.john_henry.User.application.dto.UserDTO;
+import com.john_henry.User.application.mapper.UserMapper;
+import com.john_henry.User.application.ports.input.UserService;
+import com.john_henry.User.application.ports.output.SellerRepository;
+import com.john_henry.User.application.ports.output.UserRepository;
 import com.john_henry.User.domain.exception.UserNotFoundException;
 import com.john_henry.User.domain.model.Seller;
 import com.john_henry.User.domain.model.User;
@@ -54,7 +54,6 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.getUserById(userId).orElseThrow(
                 () -> new UserNotFoundException("User with id: " + userId + " not found")
         );
-
 
         userMapper.updateFromDto(userDTO,user);
 

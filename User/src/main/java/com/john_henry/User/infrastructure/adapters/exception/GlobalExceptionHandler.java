@@ -29,5 +29,5 @@ public class GlobalExceptionHandler {
         return errorResponse;
     }
 
-    // Manejar otras excepciones personalizadas aquí
+
 }
