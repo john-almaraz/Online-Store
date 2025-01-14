@@ -1,3 +1,5 @@
+# *PROJECT IN PROGRESS*
+
 # Online-Store - Microservices Project
 This is a reference project for an online store developed as a microservices-based system using modern technologies. It is designed to demonstrate technical skills and serve as a professional portfolio.
 # Technologies Used
