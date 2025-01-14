@@ -43,6 +43,7 @@ public class SellerController {
     public ResponseEntity<List<SellerDTO>> getAllSellers (){
         return ResponseEntity.ok(sellerService.getAllSellers());
     }
+
     @DeleteMapping("/{sellerId}")
     public ResponseEntity<Void> deleteSeller(@PathVariable Integer sellerId){
         sellerService.deleteSeller(sellerId);
