@@ -14,5 +14,4 @@ public interface ProductService {
     void deleteProduct(Integer id);
     List<ProductDTO> getProductsByCategoryId(Integer categoryId);
     List<ProductDTO> getProductsBySellerId(Integer sellerId);
-
 }
