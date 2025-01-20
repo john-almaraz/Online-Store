@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
@@ -62,9 +63,12 @@ public class ProductServiceImpl implements ProductService {
             }
         } catch (TimeoutException e) {
             throw new RuntimeException("Timeout waiting for seller verification response", e);
-        } catch (Exception e) {
-            throw new RuntimeException("Error processing seller verification", e);
+        } catch (ExecutionException e) {
+            throw new RuntimeException("Error during seller verification execution", e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException("Thread was interrupted while waiting for seller verification", e);
         }
+
     }
 
     @Override
@@ -94,7 +98,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void deleteProduct(Integer id) {
-        if (productRepository.getProductById(id).isPresent())
+        if (productRepository.getProductById(id).isEmpty())
             throw new ProductNotFoundException("Product with id: " + id + " not found");
 
         productRepository.deleteProduct(id);
@@ -107,7 +111,7 @@ public class ProductServiceImpl implements ProductService {
         if (products.isEmpty())
             throw new ProductNotFoundException("Products with categoryID: " + categoryId + " not found");
 
-        return productMapper.toListDTO(productRepository.getProductsByCategoryId(categoryId));
+        return productMapper.toListDTO(products);
     }
 
     @Override
@@ -116,7 +120,7 @@ public class ProductServiceImpl implements ProductService {
         if (products.isEmpty())
             throw new ProductNotFoundException("Products with sellerID: " + sellerId + " not found");
 
-        return productMapper.toListDTO(productRepository.getProductsBySellerId(sellerId));
+        return productMapper.toListDTO(products);
     }
 
 }

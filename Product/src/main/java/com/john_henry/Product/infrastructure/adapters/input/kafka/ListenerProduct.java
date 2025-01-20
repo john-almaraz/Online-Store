@@ -1,5 +1,6 @@
 package com.john_henry.Product.infrastructure.adapters.input.kafka;
 
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.annotation.TopicPartition;
@@ -9,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
+@Getter
 @Slf4j
 @Component
 public class ListenerProduct {
