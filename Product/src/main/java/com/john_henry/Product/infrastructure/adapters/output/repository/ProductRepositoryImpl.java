@@ -61,6 +61,6 @@ public class ProductRepositoryImpl implements ProductRepository {
 
     @Override
     public List<Product> getProductsBySellerId(Integer sellerId) {
-        return List.of();
+        return productPersistenceMapper.toListDomain(jpaProductRepository.findAllBySellerId(sellerId));
     }
 }

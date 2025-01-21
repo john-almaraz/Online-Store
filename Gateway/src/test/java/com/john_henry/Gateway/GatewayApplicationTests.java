@@ -1,18 +1,13 @@
-package com.john_henry.Product;
+package com.john_henry.Gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProductApplicationTests {
+class GatewayApplicationTests {
 
 	@Test
 	void contextLoads() {
-	}
-
-	@Test
-	void mainMethodTest() {
-		ProductApplication.main(new String[]{});
 	}
 
 }
